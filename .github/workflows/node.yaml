@@ -2,9 +2,9 @@ name: deploy
 
 on:
   push:
-    branches:[main]
+    branches: [main]
   pull_request:
-    branches:[main]
+    branches: [main]
 
 jobs:
   build:
@@ -16,7 +16,7 @@ jobs:
     services:
       mongodb:
         image: mongo
-        port: 
+        ports:
           - 27017:27017
 
         env:
